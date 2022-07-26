@@ -1,0 +1,189 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+container{
+  position:fixed;
+  background-position:center;
+  top:23%;
+  left:40%;
+  font-family:sans-serif;
+  background:linear-gradient(to top,rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
+  color:#fff;
+  dispaly:fixed;
+  align-items:center;
+  justify-content:center;
+}
+.card{
+  width:500px;
+  height:900px;
+  background-color:rgb(30, 20, 82);
+  box-shadow:0 0 40px 20px rgb(0,0,0,0.26);
+  perspective:1000px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.inner-box{
+  position:relative;
+  width:100%;
+  height:100%;
+}
+.card-front{ 
+  position:relative;
+  width:100%;
+  height:100%;
+  background-position:center;
+  background-size:cover;
+  padding:55px;
+  box-sizing:border-box;
+}
+.card h2{
+  font-weight:normal;
+  font-size:24px;
+  text-align:center;
+  margin-bottom:20px;
+}
+.card label{
+color:white;
+}
+.input-box{
+  width:100%;
+  background:transparent;
+  border-radius:20px;
+  padding:10px;
+  box-sizing:border-box;
+  outline:none;
+  text-align:center;
+  color:#fff;
+}
+::placeholder{
+   color:#fff;
+   font-size:12px;
+}
+button{
+  width:100%;
+  background:transparent;
+  border:1px solid #fff;
+  margin:35px 0 10px;
+  height:32px;
+  font-size:12px;
+  border-radius:20px;
+  padding:0 10px;
+  box-sizing:border-box;
+  outline:none;
+  color:#fff;
+  cursor:pointer;
+}
+.submit-btn{
+  position:relative;
+}
+.submit-btn::after
+{
+  content:'\27a4';
+  color:#333;
+  line-height:32px;
+  font-size:17px;
+  height:32px;
+  width:32px;
+  border-radius:50%;
+  background:#fff;
+  position:absolute;
+  right:-1px;
+  top:-1px;
+}
+.card .btn{
+  margin-top:70px;
+}
+. card a{
+   color:#fff;
+   text-decoration:none;
+   dispaly:block;
+   text-align:center;
+   font-size:13px;
+   marin-top:8px;
+}
+
+</style>
+</head>
+<body style="background-color:rgb(133, 126, 156)">
+<h1 style="text-align:center;font-size:50px;color:white;">TATA CONSULTANCY SERVICES</h1>
+<div class="p1">
+<p style="color:white;font-size:20px">Tata Consultancy Services is an IT services, consulting, and business solutions organization that has been partnering with many of the world’s largest businesses in their transformation journeys for over 50 years.</p>
+</div>
+<div class="p2">
+<p style="color:white;font-size:20px">TCS offers a consulting-led, cognitive-powered, integrated portfolio of business, technology, and engineering services and solutions. This is delivered through its unique Location Independent Agile™ delivery model, recognized as a benchmark of excellence in software development.</p>
+</div>
+<div class="p3">
+<p style="color:white;font-size:20px">A part of the Tata group, India’s largest multinational business group, TCS has over 592,000 of the world’s best-trained consultants in 55 countries. The company generated consolidated revenues of US $25.7 billion in the fiscal year ended March 31, 2022, and is listed on the BSE (formerly Bombay Stock Exchange) and the NSE (National Stock Exchange) in India.</p>
+<img src="https://www.computersciencejunction.in/wp-content/uploads/2021/08/tcs-nqt-2022.jpg"width="" height="" align="center">
+</div>
+<p style="color:white;font-size:20px;text-align:center;">
+It is time to make the big move of your career with TCS National Qualifier Test (TCS NQT).
+
+TCS NQT follows an Integrated Test Pattern for both Ninja and Digital fresher hiring at TCS. Candidates need to appear for a single test and based on their performance, they will qualify for either Ninja or Digital interviews
+
+It is time to show your mettle, craft the future of the world, impact a million lives, and build an enriching career.
+
+TCS NQT is exclusively open for students graduating in the year 2023 with the following academic degrees: Bachelor of Technology (B.Tech.) / Bachelor of Engineering (B.E.) / Master of Technology (M.Tech.) / Master of Engineering (M.E.) / Master of Computer Applications (M.C.A.) / Master of Science (M.Sc. / M.S.) in any specialization offered by recognized universities / colleges.</p>
+<div class="container">
+ <div class="card">
+  <div clas="inner-box" id="card">
+   <div class="card-front">
+   <h2 style="color:white;">REGISTRATION FORM</h2>
+   <form>
+    <label>Name</label>
+    <input type="name" class="input-box" placeholder="Your name" required>
+    <label>Roll No</label>
+    <input type="name" class="input-box" placeholder="Your rollno" required>
+    <label for="details">Parent Details</label>
+    <textarea id="details" class="input-box" name="details" placeholder="Write your parent details.." style="height:30px" required></textarea>
+    <label for="adhar">Aadhar Number</label>
+    <textarea id="adhar" class="input-box" name="addhar" placeholder="Write your Adhar.." style="height:30px" required></textarea>
+    <label for="address">Address</label>
+    <textarea id="address" class="input-box" name="address" placeholder="Write your address.." style="height:40px" required></textarea>
+    <label>Qualification</label>
+    <select class="input-box" required>
+     <option>B.Tech</option>
+     <option>B.E</option>
+     <option>M.Tech</option>
+     <option>M.E</option>
+     <optionM.C.A</option>
+     <option>M.S.C</option>
+    </select>
+    <label>courses completed</label>
+    <select class="input-box" required>
+    <option>CSE</option>
+    <option>IT</option>
+    <option>ECE</option>
+    <option>MCA in Networking</option> 
+    <option>MCA in Internet workings</option>
+    <option>MCA in Application Software</option>
+    <option>MCA in Software Development</option>
+    <option>Data Science And Analytics Management</option>
+    <option>Digital Marketing E Commerce Management</option>
+    </select>
+    <label>Xth CGPA</label>
+    <input type="name" class="input-box" required>
+    <label>XIIth CGPA</label>
+    <input type="name" class="input-box" required>
+    <label>Upload Resume</label>
+    <input type="file" id="myFile" class="input-box" name="filename" placeholder="Upload"><br>
+    <label>Upload Photo</label>
+    <input type="file" id="myFile" class="input-box" name="filename" placeholder="Upload" ><br>
+    <button type="submit" class="submit-btn">Submit</button>
+  </form>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js">
+  </script>
+</body>
+</html>
