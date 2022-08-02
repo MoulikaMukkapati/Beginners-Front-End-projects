@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+<style>
+body{
+height:100vh;
+background:#03dff;
+background-image:url('https://www.mmppicture.co.in/wp-content/uploads/2019/01/New-City-Blur-Background.jpg');
+}
+.card{
+  width:550px;
+  height:720px;
+  background-image:url('https://images.unsplash.com/photo-1471879832106-c7ab9e0cee23?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80');
+  box-shadow:0 0 40px 20px rgb(0,0,0,0.26);
+  perspective:1000px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.inner-box{
+  position:relative;
+  width:100%;
+  height:100%;
+}
+.card-front{ 
+  position:relative;
+  width:100%;
+  height:100%;
+  background-position:center;
+  background-size:cover;
+  padding:55px;
+  box-sizing:border-box;
+}
+::placeholder{
+   color:#fff;
+   font-size:12px;
+}
+.addtask{
+width:100%;
+display:flex;
+padding:10px 0;
+}
+.addtask>input[type="text"]
+{
+width:90%;
+color:black;
+border:none;
+border-bottom:2px solid black;
+background:none;
+}
+.addtask button{
+cursor:pointer;
+background:white;
+color:black;
+border-radius:5px;
+}
+h3{
+font-size:28px;
+text-taransform:uppercase;
+text-align:center;
+color:white;
+}
+ol{
+list-style:none;
+}
+ol li{
+width:100%;
+paddind:18px;
+margin:5px 0;
+font-size:22px;
+border-radius:20px;
+}
+ol.completed li{
+border-radius:25px;
+height:50;
+}
+ol.notcompleted li{
+border-radius:25px;
+height:50;
+}
+li button{
+float:right;
+padding:5px;
+font-size:20px;
+line-height:20px;
+margin-right:10px;
+background:none;
+border:none;
+outline:none;
+cursor:pointer;
+}
+</style>                        
+</head>
+<body>
+ <div class="container">
+ <div class="card">
+ <div class="inner-box" id="card">
+ <div class="card-front">
+  <div class="addtask">
+   <input type="text" placeholder="Add a Task">
+   <input type="date" id="dateInput">
+   <input type="time" id="timeInput">
+   <button>Add</button>
+  </div>
+  <ol class="notcompleted">
+   <h3>Not Completed</h3>
+   <li>
+      
+   </li>
+  </ol>
+  <ol class="completed">
+   <h3>Completed</h3>
+   <li>
+     
+   </li>
+  </ol>
+ </div>
+ </div>
+</div>
+</div>
+<script>
+ 
+ const input=document.querySelector('input');
+ const btn=document.querySelector('.addtask>button');
+ btn.addEventListener('click',addList);
+ function addList(e)
+{
+ 
+ const notcompleted=document.querySelector('.notcompleted');
+ const completed=document.querySelector('.completed');
+ const newLi=document.createElement('li');
+ const checkBtn=document.createElement('button');
+ const delBtn=document.createElement('button');
+ const dateEle=document.createElement('dateInput');
+  const timeEle=document.createElement('timeInput');
+ checkBtn.innerHTML='<i class="fa fa-check"></i>';
+ delBtn.innerHTML='<i class="fa fa-trash"></i>';
+ if(input.value!=='')
+ {
+  newLi.textContent=input.value;
+  input.value='';
+  notcompleted.appendChild(newLi);
+  newLi.appendChild(checkBtn);
+  newLi.appendChild(delBtn);
+ }
+ checkBtn.addEventListener('click',function(){
+  const parent=this.parentNode;
+  parent.remove();
+  completed.appendChild(parent);
+  checkBtn.style.display='none';
+ });
+ delBtn.addEventListener('click',function(){
+  const parent=this.parentNode;
+  parent.remove();
+ });
+}
+
+</script>
+</body>
+</html>
