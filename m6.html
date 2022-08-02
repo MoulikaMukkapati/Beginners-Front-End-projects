@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LIST</title>
+        <style>
+       ul.a{
+        list-style-type: circle;
+        font-size: medium;
+        font-style: oblique;
+       }
+       body{
+        background-color: beige;
+       }
+        </style>
+    </head>
+    <body>
+        <h1 style="text-align:center">TRAINING CENTER</h1>
+        <h2>PROGRAMMING LIST</h2>
+        <ol reversed start="number" id="id01">
+            <li>C</li>
+            <li>PYTHON</li>
+            <li>C++</li>
+            <li>JAVA</li>
+            <li>C#</li>
+            <li>R</li>
+        </ol><br>
+        <h2>WEB PROGRAMMING</h2>
+        <ul  class="a" id="id02">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JAVASCRIPT</li>
+            <li>BOOTSTRAP</li>
+            <li>REACT</li>
+            <li>ANGULAR</li>
+        </ul>
+        <h2>EMERGING TECHNOLOGIES</h2>
+        <dl class="a1">
+            <dt><b>AI</b></dt>
+            <dd>Artificial intelligence (AI) is the ability of a computer or a robot controlled by a computer to do tasks that are usually done by humans because they require human intelligence and discernment.</dd>
+            <dt><b>MACHINE LEARNING</b></dt>
+            <dd>Machine learning is a branch of artificial intelligence (AI) and computer science which focuses on the use of data and algorithms to imitate the way that humans learn, gradually improving its accuracy. IBM has a rich history with machine learning</dd>
+            <dt><b>DATA SCIENCE</b></dt>
+            <dd>Data science is the domain of study that deals with vast volumes of data using modern tools and techniques to find unseen patterns, derive meaningful information, and make business decisions</dd>
+            <dt><b>Computer vision</b></dt>
+            <dd>Computer vision is a field of artificial intelligence (AI) that enables computers and systems to derive meaningful information from digital images, videos and other visual inputs — and take actions or make recommendations based on that information.</dd>
+            <dt><b>cloud Computing</b></dt>
+            <dd>cloud computing is an abstraction of compute, storage, and network infrastructure assembled as a platform on which applications </dd>
+            <dt><b>Robotics</b></dt>
+            <dd>Robotics is the intersection of science, engineering and technology that produces machines, called robots, that substitute for (or replicate) human actions</dd>
+        </dl>
+     <button onclick="sortListDir()">Sort</button>
+<script>
+function sortListDir() {
+  var list, i, switching, b, shouldSwitch, dir, switchcount = 0;
+  list = document.getElementById("id01");
+  switching = true;
+  dir = "asc";
+  while (switching) {
+    switching = false;
+    b = list.getElementsByTagName("LI");
+    for (i = 0; i < (b.length - 1); i++) {
+      shouldSwitch = false;
+      if (dir == "asc") {
+        if (b[i].innerHTML.toLowerCase() > b[i + 1].innerHTML.toLowerCase()) {
+          shouldSwitch = true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (b[i].innerHTML.toLowerCase() < b[i + 1].innerHTML.toLowerCase()) {
+        
+          shouldSwitch= true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      b[i].parentNode.insertBefore(b[i + 1], b[i]);
+      switching = true;
+      switchcount ++;
+    } else {
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
+}
+</script>
+<script>
+   document .getElementsByTagName("button")[0] .addEventListener("click", sortList);
+   function sortList() {
+      var list1, i1, sortFlag, LiEle, sorted;
+      list1 = document.querySelector(".a");
+      sortFlag = true;
+      while (sortFlag) {
+         sortFlag = false;
+         LiEle = list1.getElementsByTagName("LI");
+         for (i1 = 0; i1 < LiEle.length - 1; i1++) {
+            sorted = false;
+            if ( LiEle[i1].innerHTML.toLowerCase() > LiEle[i1 + 1].innerHTML.toLowerCase() ) {
+               sorted = true;
+               break;
+            }
+         }
+         if (sorted) {
+            LiEle[i1].parentNode.insertBefore(LiEle[i1 + 1], LiEle[i1]);
+            sortFlag = true;
+         }
+      }
+   }
+</script>
+    </body>
+</html>
