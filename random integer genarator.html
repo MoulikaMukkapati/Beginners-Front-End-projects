@@ -25,15 +25,14 @@
         display a message "Not matched"
     </p>
     <script type="text/javascript">
-      const num = Math.ceil(Math.random() * 10);
-document.write(num+"\n");
  const gnum = prompt('Guess the number between 1 and 10 inclusive');
+ const num = Math.ceil(Math.random()*10);
+document.write('Generated Random Number '+num);
  if (gnum == num)
   document.write('Matched');
   else
-   document.write('Not matched, the number was '+gnum);
+   document.write('<br>'+'Not matched, the number you given was '+gnum);
     </script>
-    <h1>JAVACSRIPT</h1>
     <h2>
         JavaScript: Program to
         get the website URL ?
@@ -41,7 +40,7 @@ document.write(num+"\n");
     <p>
         <b>
             Click on Below Button
-            To Get Current URL
+            To Get the Current URL you are using
         </b>
     </p>
 
@@ -53,44 +52,9 @@ document.write(num+"\n");
         function GetURL() {
             var gfg = document.URL;
             document.getElementById("url").innerHTML = gfg;
-
-
         }
    </script>
-    <h2> Display variables</h2>
-    <p id="demo"></p>
-    <script>
-       var x = 4;
-        var y = 5;
-        var z = x + y;
-        document.getElementById("demo").innerHTML = "The value of z is: " + z;
-    </script>
-    <h2>Data type of variables</h2>
-    <p id="kk"></p>
-    <script>
-        document.getElementById("kk").innerHTML =
-            typeof 1.2 + "<br>" +
-            typeof "moulika" + "<br>" +
-            typeof true + "<br>" +
-            typeof false + "<br>" +
-            typeof x;
-    </script>
-    <p style="color:green">AREA OF THE CIRCLE</p>
-    <script>
-                let pi = 3.14159265358979323846;
-        function findArea(r) {
-
-            return (pi * r * r);
-        }
-        let r, Area;
-        r = 8;
-
-        Area = findArea(r);
-
-        document.write("Area of Circle is :" + Area);
-    </script>
-
-
+    
 </body>
 
 </html>
